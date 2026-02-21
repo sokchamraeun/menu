@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu – Coffee Shop</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { 
+      background: #faf7f2;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    
+    .menu-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .image-placeholder {
+      background: linear-gradient(135deg, #d9a99a 0%, #b87c6b 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .image-placeholder::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    }
+  </style>
+</head>
+<body class="antialiased py-10 px-4 md:py-16">
+
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-6xl font-serif font-bold text-amber-900 mb-4">Our Menu</h1>
+      <p class="text-gray-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
+      </p>
+      <p class="text-gray-500 text-sm md:text-base">
+        Ipsum has been the industry's standard dummy text ever since.
+      </p>
+    </div>
+
+    <!-- Coffee Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      
+      <!-- Card 1: Espresso Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <!-- Image Container -->
+        <div class="image-placeholder h-48 relative">
+          <!-- Coffee cup icon as placeholder -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <!-- Price Badge -->
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $25
+          </div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Espresso Coffee</h3>
+          
+          <!-- Ingredients -->
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">100% Arabica</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Dark Roast</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Italian Blend</span>
+          </div>
+          
+          <!-- Description -->
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Rich and bold flavor with hints of chocolate.
+          </p>
+          
+          <!-- Order Button -->
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Double Espresso Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-placeholder h-48 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $35
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Double Espresso Coffee</h3>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Double Shot</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Strong Roast</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Italian</span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Double the intensity, double the flavor. Perfect for those who need an extra kick.
+          </p>
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Red Eye Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-placeholder h-48 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $45
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Red Eye Coffee</h3>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Extra Caffeine</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Bold Blend</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Morning Boost</span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Coffee with an extra shot of espresso. The ultimate wake-up call.
+          </p>
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Cappuccino Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-placeholder h-48 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $50
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Cappuccino Coffee</h3>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Foamy Milk</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Light Roast</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Cinnamon Dust</span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Perfect balance of espresso, steamed milk, and thick foam. A true Italian classic.
+          </p>
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5: Black Eye Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-placeholder h-48 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $25
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Black Eye Coffee</h3>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Two Shots</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Dark Roast</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Intense</span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Drip coffee with two shots of espresso. For the boldest coffee lovers.
+          </p>
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 6: Americano Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-placeholder h-48 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $30
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Americano Coffee</h3>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Smooth</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Medium Roast</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Classic</span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Espresso diluted with hot water. Smooth and satisfying American style.
+          </p>
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 7: Cold Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-placeholder h-48 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $40
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Cold Coffee</h3>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Iced</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Vanilla</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Caramel</span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Refreshing cold brew with ice and your choice of flavored syrup.
+          </p>
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 8: Long Black Coffee -->
+      <div class="menu-card bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="image-placeholder h-48 relative">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5 3h14v4h-4v6h-6V7H5V3zm14 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v2a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9h14z"/>
+            </svg>
+          </div>
+          <div class="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+            $55
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Long Black Coffee</h3>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Australian Style</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Strong</span>
+            <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">Smooth</span>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Hot water poured over double espresso. Rich crema and full flavor.
+          </p>
+          <button class="mt-4 w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200">
+            Order Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Text -->
+    <div class="mt-16 text-center text-gray-400 text-sm space-y-1">
+      <p>Lorem Ipsum is simply dummy text</p>
+      <p>Lorem Ipsum is simply dummy text</p>
+      <p>Lorem Ipsum is simply dummy text</p>
+    </div>
+
+  </div>
+</body>
+</html>
